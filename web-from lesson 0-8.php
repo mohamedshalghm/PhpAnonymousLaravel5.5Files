@@ -62,3 +62,20 @@ Route::patch('test',function (){
     echo 'Value To Patch Route From Get Request Is  :- '.request()->input('name');
 });
 */
+
+
+
+// route parameter
+
+
+Route::get('user/{id}',function (){
+    echo 'Welcome User';
+});
+
+Route::get('user/{id}/{name}',function (){
+    echo 'Welcome User';
+});
+
+Route::get('user/{id?}/{name?}',function ($id=null,$userName=null){
+    echo 'Welcome User '.$userName .'  , ID Is  => '.$id;
+});
