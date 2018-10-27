@@ -79,3 +79,41 @@ Route::get('user/{id}/{name}',function (){
 Route::get('user/{id?}/{name?}',function ($id=null,$userName=null){
     echo 'Welcome User '.$userName .'  , ID Is  => '.$id;
 });
+
+
+//regular expression
+/*
+ *
+ just number
+Route::get('user/{id?}/{name?}',function ($id=null,$userName=null){
+    echo 'Welcome User '.$userName .'  , ID Is  => '.$id;
+})->where('id','[0-9]+');
+*/
+/*
+ * Number And Chars
+ *
+ *
+ * Route::get('user/{id?}/{name?}',function ($id=null,$userName=null){
+    echo 'Welcome User '.$userName .'  , ID Is  => '.$id;
+    })->where('id','[0-9A-Za-z]+');
+ *
+ * */
+/*
+//validate more than one params
+Route::get('user/{id?}/{name?}',function ($id=null,$userName=null){
+    echo 'Welcome User '.$userName .'  , ID Is  => '.$id;
+})->where(['id'=>'[0-9A-Za-z]+','name'=>'[A-Za-z]+']);
+
+*/
+
+//public pattern applied for all route that have this parameter
+
+Route::pattern('id','[0-9A-Za-z]+');
+
+Route::get('test/{id?}',function ($id=''){
+    return $id;
+});
+Route::get('test/{id?}/{name?}',function ($id='',$name=null){
+    return $id .'  , Name Is  :- '.$name ;
+});
+
