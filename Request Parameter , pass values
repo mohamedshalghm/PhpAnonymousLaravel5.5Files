@@ -32,3 +32,10 @@ $request->input('name');  == $request->get('name');  == request('name');
 $request->has('name');
 // $request->all() = request()->all()  ====> get all request values
 
+//Pass Values From Controller to view vy with(key,value)
+//Ex:-
+    public function Test(){
+        $action1='Test Value1';
+        $action2='Test Value2';
+        return view('test')->with('key1',$action1)->with('key2',$action2);  ......>
+    }
