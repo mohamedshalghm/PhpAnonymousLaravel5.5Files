@@ -13,3 +13,15 @@
             </div>
             
  //..........................................
+// using compact
+Ex:-
+    public function Test(){
+        $action1='Test Value1';
+        $action2='Test Value2';
+        return view('test',compact('action1','action2'));
+    }
+//blade file
+            <div>
+                {{$action1}} --
+                {{$action2}}
+            </div>
