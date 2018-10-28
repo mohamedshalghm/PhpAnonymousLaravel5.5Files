@@ -25,3 +25,10 @@ Ex:-
                 {{$action1}} --
                 {{$action2}}
             </div>
+///////request => get values 
+--  define object of Request                   ,   use request() method
+$request->input('name');  == $request->get('name');  == request('name');
+//check if request has value
+$request->has('name');
+// $request->all() = request()->all()  ====> get all request values
+
