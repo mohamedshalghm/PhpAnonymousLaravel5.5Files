@@ -1,0 +1,15 @@
+/* Pass Value As Araay key => $value */
+//Ex:-
+    public function Test(){
+        $action1='Test Value1';
+        $action2='Test Value2';
+        return view('test',['key1'=>$action1,'key2'=>$action2]);
+    }
+    
+    // blade file
+                <div>
+                {{$key1}} --
+                {{$key2}}
+            </div>
+            
+ //..........................................
