@@ -2,7 +2,23 @@
 #Collections In Laravel  , Laravel Return Every Thing As Collection
 
     - collect => array to collection
+    
+    Ex:-
+    
+    $array=[];
+    collect($array); => transfer $array to collection
+      
     -all => collection to array
+    
+    collect($array)->all()  => transfer collect($array) to array
+    
     -avg average of values in collection collection->avg() ,collection->avg($values)
+    
+        ---- Two cases 
+            1- Array Of Numbers 
+                --> collect($array)->avg(); => AVG Of Number In collect($array)
+            2- Array Of Arrays
+                --> collect($array)->avg(arrayKey)  Get AVG For This Array Key
+    
     -chunk  => divid collection to sub collection
     -collapse => collection sub collections to one collection
