@@ -21,4 +21,45 @@
                 --> collect($array)->avg(arrayKey)  Get AVG For This Array Key
     
     -chunk  => divid collection to sub collection
+    
+    collect($array)->chunk(4)  => divid array of arrays to sub collections
+    
+      EX:- 
+    $array=[
+                ['name'=>'mohammed','age'=>28],
+                ['name'=>'Hassan','age'=>20],
+                ['name'=>'mohammed','age'=>30],
+                ['name'=>'mohammed','age'=>25],                
+                ['name'=>'mohammed','age'=>28],
+                ['name'=>'Hassan','age'=>20],
+                ['name'=>'mohammed','age'=>30],
+                ['name'=>'mohammed','age'=>25],                
+                ['name'=>'Hassan','age'=>20],
+                ['name'=>'mohammed','age'=>30],
+                ['name'=>'mohammed','age'=>25],
+           ];
+           
+           collect($array)->chunk(4);  ---> divid $array to sub collection each one has 4 collections
+    
     -collapse => collection sub collections to one collection
+    
+        $array=[
+                ['name'=>'mohammed','age'=>28],
+                ['name'=>'Hassan','age'=>20],
+                ['name'=>'mohammed','age'=>30],
+                ['name'=>'mohammed','age'=>25],                
+                ['name'=>'mohammed','age'=>28],
+                ['name'=>'Hassan','age'=>20],
+                ['name'=>'mohammed','age'=>30],
+                ['name'=>'mohammed','age'=>25],                
+                ['name'=>'Hassan','age'=>20],
+                ['name'=>'mohammed','age'=>30],
+                ['name'=>'mohammed','age'=>25],
+           ];
+        
+            collect($array)->chunk(4)->collapse();  => collapse chunk of collection to main one collection
+
+
+
+
+    
