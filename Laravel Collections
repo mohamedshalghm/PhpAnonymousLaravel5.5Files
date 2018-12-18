@@ -1,1 +1,8 @@
 
+#Collections In Laravel  , Laravel Return Every Thing As Collection
+
+    - collect => array to collection
+    -all => collection to array
+    -avg average of values in collection collection->avg() ,collection->avg($values)
+    -chunk  => divid collection to sub collection
+    -collapse => collection sub collections to one collection
