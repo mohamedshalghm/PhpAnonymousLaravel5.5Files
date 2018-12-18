@@ -60,6 +60,11 @@
             collect($array)->chunk(4)->collapse();  => collapse chunk of collection to main one collection
 
 
+    ---Combine  => combine keys and valuse of collection
+        $array=[
+        'name','age'
+    ];
 
+    dd(collect($array)->combine(['Mohammed Shalgham',28]));
 
     
